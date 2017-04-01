@@ -1,4 +1,4 @@
-Quick start for building static webpage with Webpack
+R&D Bridge
 ==========
 
 You need the following
