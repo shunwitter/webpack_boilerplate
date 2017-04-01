@@ -1,4 +1,4 @@
-Quick start for building static web page
+Quick start for building static web page with Webpack
 ==========
 
 This includes following setting
