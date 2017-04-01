@@ -26,7 +26,7 @@ const htmlSetting = {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          outputPath: './public/images',
+          outputPath: './images',
         },
       },
     ],
