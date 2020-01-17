@@ -1,28 +1,51 @@
-Quick start for building static web page with Webpack
-==========
+Webpack boilerplate for static website
+========================================================
 
-This includes following setting
------
-
-- Webpack
-- Bootstrap
-- jQuery
 - Pug
-- Postcss
+- Sass
 
 
-You need these tools installed
------
+File Structure
+--------------------------------------------------------
 
-- Node(NPM)
-- Yarn
-- Webpack
+```
+.
++-- public // Deploy this
+|   +-- .keep
++-- src
+|   +-- images
+|   +-- javascripts
+|   |   +-- main.js
+|   +-- stylesheets
+|   |   +-- main.scss
+|   +-- index.pug
++-- webpack
+|   +-- htmlConfig.js // Add new entry points here
+|   +-- javascriptConfig.js
+|   +-- stylesheetConfig.js
++-- webpack.config.js
+```
 
 
 Let's get started
------
+--------------------------------------------------------
 
 ```
-$ yarn install
-$ yarn run build
+$ npm run build
+```
+
+
+Update packages
+--------------------------------------------------------
+
+https://github.com/tjunnone/npm-check-updates
+
+```
+$ npm install -g npm-check-updates
+
+# To check latest versions
+$ ncu
+
+# To Upgrade everything to the latest version
+$ ncu -u
 ```
