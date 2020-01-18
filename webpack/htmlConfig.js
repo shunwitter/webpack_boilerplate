@@ -1,6 +1,5 @@
 const path              = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractHTML       = new ExtractTextPlugin('[name].html');
 
 module.exports = {
   entry: {
@@ -15,8 +14,11 @@ module.exports = {
       {
         test: /\.pug$/,
         exclude: /(node_modules)/,
-        use: extractHTML.extract({
-          use: ['html-loader', 'pug-html-loader'],
+        use: ExtractTextPlugin.extract({
+          use: [
+            'html-loader?minimize=false',
+            'pug-html-loader?pretty=true'
+          ],
         }),
       },
       {
@@ -25,9 +27,14 @@ module.exports = {
         options: {
           name: '[name]_[hash].[ext]',
           outputPath: './images',
+          // Hack:
+          // https://stackoverflow.com/questions/59070216/webpack-file-loader-outputs-object-module
+          esModule: false,
         },
       },
     ],
   },
-  plugins: [extractHTML],
+  plugins: [
+    new ExtractTextPlugin('[name].html'),
+  ],
 };
