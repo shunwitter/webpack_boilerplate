@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "npx webpack -w --mode=production"
+    "build": "npx webpack --mode=production",
+    "watch": "npx webpack -w --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

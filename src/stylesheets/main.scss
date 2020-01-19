@@ -4,6 +4,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/bg.png");
+  background-repeat: repeat;
   h1 {
     color: purple;
     font-family: sans-serif;

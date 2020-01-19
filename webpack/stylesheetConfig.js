@@ -20,11 +20,19 @@ module.exports = {
         }),
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)$/,
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
         loader: 'file-loader',
         options: {
           name: '[name]_[hash].[ext]',
-          outputPath: './assets/',
+          outputPath: '../images',
+        },
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name]_[hash].[ext]',
+          outputPath: '../fonts',
         },
       },
     ],
