@@ -30,8 +30,15 @@ File Structure
 Let's get started
 --------------------------------------------------------
 
-```
-$ npm run build
+```bash
+# Start compiling
+$ npm run watch
+
+# Start web server
+$ npm start
+
+# For deployment
+$ npm build
 ```
 
 

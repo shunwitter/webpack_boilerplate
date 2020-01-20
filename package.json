@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "ws -d public",
     "build": "npx webpack --mode=production",
     "watch": "npx webpack -w --mode=production"
   },
@@ -15,6 +16,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
+    "local-web-server": "^3.0.7",
     "node-sass": "^4.13.1",
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^8.0.2",
