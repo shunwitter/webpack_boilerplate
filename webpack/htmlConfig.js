@@ -1,5 +1,6 @@
-const path              = require('path');
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -35,6 +36,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ExtractTextPlugin('[name].html'),
   ],
 };
