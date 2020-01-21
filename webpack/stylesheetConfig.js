@@ -3,10 +3,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/stylesheets/main.scss',
+    main: './src/assets/stylesheets/main.scss',
   },
   output: {
-    path: path.resolve('./public/stylesheets'),
+    path: path.resolve('./public/assets/stylesheets'),
     filename: '[name].css',
   },
   module: {

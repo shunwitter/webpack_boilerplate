@@ -26,7 +26,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name]_[hash].[ext]',
-          outputPath: './images',
+          outputPath: './assets/images',
           // Hack:
           // https://stackoverflow.com/questions/59070216/webpack-file-loader-outputs-object-module
           esModule: false,

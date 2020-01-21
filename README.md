@@ -13,11 +13,12 @@ File Structure
 +-- public // Deploy this
 |   +-- .keep
 +-- src
-|   +-- images
-|   +-- javascripts
-|   |   +-- main.js
-|   +-- stylesheets
-|   |   +-- main.scss
+|   +-- assets
+|   |   +-- images
+|   |   +-- javascripts
+|   |   |   +-- main.js
+|   |   +-- stylesheets
+|   |   |   +-- main.scss
 |   +-- index.pug
 +-- webpack
 |   +-- htmlConfig.js // Add new entry points here
