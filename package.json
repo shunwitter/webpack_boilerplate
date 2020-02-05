@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "ws -d public",
-    "build": "npx webpack --mode=production",
-    "watch": "npx webpack -w --mode=development --progress",
-    "stats": "npx webpack -w --mode=production --profile --json > stats.json"
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --open"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
@@ -15,17 +13,15 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
-    "extract-loader": "^4.0.3",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^4.0.0-beta.11",
-    "local-web-server": "^3.0.7",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "4.13.1",
     "pug-html-loader": "^1.1.5",
     "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.2",
     "webpack": "4.41.5",
-    "webpack-cli": "3.3.10"
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "^3.10.3"
   }
 }
