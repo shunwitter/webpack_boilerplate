@@ -9,9 +9,16 @@ body {
   h1 {
     color: purple;
     font-family: sans-serif;
+    font-size: 4em;
   }
   img {
     width: 600px;
     margin: 0 auto;
+  }
+}
+
+.menu {
+  a {
+    margin-right: 1em;
   }
 }
