@@ -3,6 +3,16 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const htmlPlugin = (paths) => (
+  paths.map(path => (
+    new HtmlWebpackPlugin({
+      template: `./src/pages/${path}.pug`,
+      filename: `${path}.html`,
+      minify: false,
+    })
+  ))
+);
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -81,15 +91,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/stylesheets/[name]-[hash].css',
     }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/index.pug',
-      filename: 'index.html',
-      minify: false,
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/pages/posts/1.pug',
-      filename: 'posts/1.html',
-      minify: false,
-    }),
+    ...htmlPlugin([
+      'index',
+      'posts/1',
+    ]),
   ],
 }
